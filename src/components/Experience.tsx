@@ -4,7 +4,7 @@ const Experience = () => {
   const experiences = [
     {
       company: 'Cyberinfrastructure for Network Science Center (CNS@IU)',
-      position: 'Software Developer',
+      position: 'Software Engineer',
       duration: 'Jan 2025 - Present',
       year: '2025',
       location: 'Bloomington, IN',
