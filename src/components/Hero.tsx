@@ -6,12 +6,19 @@ const Hero = () => {
   };
 
  return (
-    <section className="relative min-h-screen w-full flex items-center justify-center bg-white">
+    <section id = "home" className="relative min-h-screen w-full flex items-center justify-center bg-white">
   <div className="w-full px-6 md:px-10">
   <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left side - Text content */}
           <div className="animate-fade-in flex flex-col items-center text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-black mb-6 animate-slide-up">
+            <div className="mb-6 flex justify-center animate-scaleIn">
+                <span className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs text-gray-700">
+                    <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    Open to Opportunities
+                </span>
+            </div>
+
+            <h1 className="text-5xl md:text-6xl font-bold font-['Helvetica'] text-black mb-6 animate-slide-up">
               Parth <span className="text-blue-600">Godse</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 mb-8 animate-slide-up animation-delay-200">

@@ -5,19 +5,19 @@ const Contact = () => {
     {
       icon: <Mail className="w-5 h-5" />,
       label: 'Email',
-      value: 'john.doe@email.com',
-      href: 'mailto:john.doe@email.com'
+      value: 'parthgod0708@gmail.com',
+      href: 'mailto:parthgod0708@gmail.com'
     },
     {
       icon: <Phone className="w-5 h-5" />,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
+      value: '+1 (812) 553-2820',
       href: 'tel:+15551234567'
     },
     {
       icon: <MapPin className="w-5 h-5" />,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'United States',
       href: '#'
     }
   ];

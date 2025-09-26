@@ -22,20 +22,25 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-4xl px-6">
-      <nav className={`transition-all duration-300 rounded-2xl px-6 py-4 ${
-        isScrolled 
-          ? 'bg-white/10 backdrop-blur-md border border-white/20 shadow-lg' 
-          : 'bg-white/5 backdrop-blur-sm border border-white/10'
-      }`}>
+        <header
+        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl px-6 rounded-full ring-1 shadow-md
+            ${isScrolled
+            ? 'bg-white/10 backdrop-blur-md ring-black/20 shadow-lg'
+            : 'bg-white/5 backdrop-blur-sm ring-black/10'}
+        `}
+        >
+        <nav className="px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold text-black">
-            Portfolio
-          </div>
+          <button
+            onClick={() => scrollToSection('home')}
+            className="text-xl font-bold font-mono text-black hover:text-blue-600 transition-colors duration-300"
+          >
+            Parth.dev
+          </button>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {['About', 'Experience', 'Projects', 'Contact'].map((item) => (
+            {['Home', 'About', 'Experience', 'Projects', 'Contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}

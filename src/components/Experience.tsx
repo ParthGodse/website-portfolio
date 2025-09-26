@@ -3,11 +3,11 @@ import { Calendar, MapPin } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      company: 'Tech Innovations Inc.',
-      position: 'Senior Software Developer',
-      duration: '2022 - Present',
-      year: '2022',
-      location: 'San Francisco, CA',
+      company: 'Cyberinfrastructure for Network Science Center (CNS@IU)',
+      position: 'Software Developer',
+      duration: 'Jan 2025 - Present',
+      year: '2025',
+      location: 'Bloomington, IN',
       description: 'Lead development of scalable web applications serving 100k+ users. Mentor junior developers and architect cloud-native solutions using AWS.',
       achievements: [
         'Improved application performance by 40%',
@@ -16,11 +16,11 @@ const Experience = () => {
       ]
     },
     {
-      company: 'Digital Solutions Ltd.',
-      position: 'Full-Stack Developer',
-      duration: '2020 - 2022',
-      year: '2020',
-      location: 'Austin, TX',
+      company: 'Hyphenova',
+      position: 'Software Engineer - AI/ML',
+      duration: 'July 2024 - Nov 2024',
+      year: '2024',
+      location: 'Los Angeles, CA',
       description: 'Developed and maintained multiple client projects using React, Node.js, and various databases. Collaborated with design and product teams.',
       achievements: [
         'Delivered 15+ successful projects',
@@ -29,11 +29,11 @@ const Experience = () => {
       ]
     },
     {
-      company: 'StartupXYZ',
-      position: 'Junior Developer',
-      duration: '2019 - 2020',
-      year: '2019',
-      location: 'Remote',
+      company: 'CanspiritAI',
+      position: 'Software Engineer',
+      duration: 'Mar 2022 - June 2022',
+      year: '2022',
+      location: 'Pune, India',
       description: 'Built responsive web applications and RESTful APIs. Gained experience in agile development and collaborative coding practices.',
       achievements: [
         'Contributed to 3 major product releases',
@@ -57,8 +57,8 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div key={exp.company} className="relative">
               {/* Timeline line */}
-              {index !== experiences.length - 1 && (
-                <div className="absolute left-20 top-16 w-0.5 h-24 bg-blue-200"></div>
+              {index !== experiences.length && (
+                <div className="absolute left-25.5 top-13 w-0.5 h-60 bg-blue-200"></div>
               )}
               
               <div className="flex items-start gap-6 mb-12">
@@ -72,7 +72,7 @@ const Experience = () => {
                 </div>
                 
                 {/* Content */}
-                <div className="flex-1 bg-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <div className="flex-1 bg-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-200 border-t-4 border-t-blue-600">
                   <div className="flex flex-col md:flex-row md:items-center justify-between mb-3">
                     <div>
                       <h3 className="text-xl font-bold text-black">{exp.position}</h3>

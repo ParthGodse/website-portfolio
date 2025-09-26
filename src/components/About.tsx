@@ -52,14 +52,16 @@ const About = () => {
             <h3 className="text-2xl font-bold text-black mb-6">Summary</h3>
             <div className="bg-gray-50 p-6 rounded-xl">
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                I'm a passionate software developer with 5+ years of experience building 
-                scalable web applications and mobile solutions. I love turning complex 
+                I'm a passionate software developer who enjoys building building 
+                scalable web applications and has experience in Machine Learning, Agentic AI and Data Analysis,
+                with a interest in leveraging data to solve real-world problems. I love turning complex 
                 problems into simple, beautiful, and intuitive solutions.
+                
+                
               </p>
               <p className="text-gray-600 leading-relaxed">
                 When I'm not coding, you can find me exploring new technologies, 
-                contributing to open source projects, or sharing knowledge through 
-                technical writing and mentoring.
+                watching/playing cricket and video games.
               </p>
             </div>
           </div>
