@@ -52,14 +52,26 @@ const Projects = () => {
               key={project.title}
               className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
             >
-              <div className="relative overflow-hidden">
+              {/* <div className="relative overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
-              </div>
+              </div> */}
+              <div className="relative overflow-hidden h-48 md:h-56">
+                <img
+                    src={project.image}
+                    alt={project.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                    onError={(e) => { e.currentTarget.src = 'https://via.placeholder.com/800x450?text=Preview'; }}
+                />
+                <div className="pointer-events-none absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/10 transition-all duration-300" />
+                </div>
+
               
               <div className="p-6">
                 <h3 className="text-xl font-bold text-black mb-3">{project.title}</h3>

@@ -1,4 +1,5 @@
 import { ChevronDown } from 'lucide-react';
+import profilePic from '../assets/profile_pic.jpg';
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -49,7 +50,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-600 shadow-2xl transform hover:scale-105 transition-transform duration-300">
                 <img
-                  src=""
+                  src={profilePic}
                   alt="Parth Godse"
                   className="w-full h-full object-cover"
                 />

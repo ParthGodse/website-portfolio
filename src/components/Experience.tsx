@@ -72,7 +72,7 @@ const Experience = () => {
                 </div>
                 
                 {/* Content */}
-                <div className="flex-1 bg-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-200 border-t-4 border-t-blue-600">
+                <div className="flex-1 bg-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-200 border-l-4 border-l-blue-600">
                   <div className="flex flex-col md:flex-row md:items-center justify-between mb-3">
                     <div>
                       <h3 className="text-xl font-bold text-black">{exp.position}</h3>
