@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react';
-import profilePic from '../assets/profile_pic.jpg';
+import profilePic from '../assets/p2.jpg';
 
 const Hero = () => {
   const scrollToAbout = () => {
