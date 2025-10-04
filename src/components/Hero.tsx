@@ -7,43 +7,48 @@ const Hero = () => {
   };
 
  return (
-    <section id = "home" className="relative min-h-screen w-full flex items-center justify-center bg-white">
+    <section id="home" className="relative min-h-screen w-full flex items-center justify-center bg-white">
   <div className="w-full px-6 md:px-10">
-  <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* Left side - Text content */}
-          <div className="animate-fade-in flex flex-col items-center text-center">
-            <div className="mb-6 flex justify-center animate-scaleIn">
-                <span className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs text-gray-700">
-                    <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                    Open to Opportunities
-                </span>
-            </div>
-
-            <h1 className="text-5xl md:text-6xl font-bold font-['Helvetica'] text-black mb-6 animate-slide-up">
-              Parth <span className="text-blue-600">Godse</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-700 mb-8 animate-slide-up animation-delay-200">
-              Full-Stack Software Developer
-            </p>
-            <p className="text-lg text-gray-600 mb-12 animate-slide-up animation-delay-400">
-              Passionate about creating elegant solutions to complex problems.
-              Specializing in modern web technologies and scalable applications.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-slide-up animation-delay-600">
-              <button
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 font-medium transform hover:scale-105"
-              >
-                View My Work
-              </button>
-              <button
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-3 border-2 border-black text-black rounded-lg hover:bg-black hover:text-white transition-all duration-300 font-medium transform hover:scale-105"
-              >
-                Get In Touch
-              </button>
-            </div>
+    <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+      {/* Left side - Text content */}
+      <div className="mx-auto max-w-2xl w-full pl-30"> {/* centers the column */}
+        <div className="animate-fade-in flex flex-col items-start text-left">
+          <div className="mb-6 flex justify-start animate-scaleIn">
+            <span className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs text-gray-700">
+              <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              Open to Opportunities
+            </span>
           </div>
+
+          <h1 className="text-5xl md:text-6xl font-bold font-['Helvetica'] text-black mb-6 animate-slide-up">
+            Parth <span className="text-blue-600">Godse</span>
+          </h1>
+
+          <p className="text-xl md:text-2xl text-gray-700 mb-8 animate-slide-up animation-delay-200">
+            Full-Stack Software Developer
+          </p>
+
+          <p className="text-lg text-gray-600 mb-12 animate-slide-up animation-delay-400">
+            Passionate about creating elegant solutions to complex problems.
+            Specializing in modern web technologies and scalable applications.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 animate-slide-up animation-delay-600 sm:self-start">
+            <button
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 font-medium transform hover:scale-105"
+            >
+              View My Work
+            </button>
+            <button
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="px-8 py-3 border-2 border-black text-black rounded-lg hover:bg-black hover:text-white transition-all duration-300 font-medium transform hover:scale-105"
+            >
+              Get In Touch
+            </button>
+          </div>
+        </div>
+      </div>
           
           {/* Right side - Profile picture */}
           <div className="flex justify-center animate-fade-in animation-delay-300">
