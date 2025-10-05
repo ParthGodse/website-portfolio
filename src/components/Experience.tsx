@@ -2,46 +2,47 @@ import { Calendar, MapPin } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
-    {
-      company: 'Cyberinfrastructure for Network Science Center (CNS@IU)',
-      position: 'Software Engineer',
-      duration: 'Jan 2025 - Present',
-      year: '2025',
-      location: 'Bloomington, IN',
-      description: 'Lead development of scalable web applications serving 100k+ users. Mentor junior developers and architect cloud-native solutions using AWS.',
-      achievements: [
-        'Improved application performance by 40%',
-        'Led migration to microservices architecture',
-        'Mentored 5+ junior developers'
-      ]
-    },
-    {
-      company: 'Hyphenova',
-      position: 'Software Engineer - AI/ML',
-      duration: 'July 2024 - Nov 2024',
-      year: '2024',
-      location: 'Los Angeles, CA',
-      description: 'Developed and maintained multiple client projects using React, Node.js, and various databases. Collaborated with design and product teams.',
-      achievements: [
-        'Delivered 15+ successful projects',
-        'Reduced deployment time by 60%',
-        'Implemented automated testing pipeline'
-      ]
-    },
-    {
-      company: 'CanspiritAI',
-      position: 'Software Engineer',
-      duration: 'Mar 2022 - June 2022',
-      year: '2022',
-      location: 'Pune, India',
-      description: 'Built responsive web applications and RESTful APIs. Gained experience in agile development and collaborative coding practices.',
-      achievements: [
-        'Contributed to 3 major product releases',
-        'Improved code coverage to 85%',
-        'Optimized database queries by 30%'
-      ]
-    }
-  ];
+  {
+    company: 'Cyberinfrastructure for Network Science Center (CNS@IU)',
+    position: 'Software Engineer',
+    duration: 'Jan 2025 - Present',
+    year: '2025',
+    location: 'Bloomington, IN',
+    description:
+      'Built OpenCV + NumPy automation for biomedical image segmentation and a Python engine to generate high-resolution SVG schematics of organ blood flow from structured CSV datasets.',
+    achievements: [
+      'Automated segmentation pipeline reduced manual effort from hours to minutes; scaled 400k+ images with CUDA + multithreading, cutting runtime by 40% while preserving quality via adaptive resizing/aspect-ratio alignment.',
+      'Anatomical visualization system with ID normalization, FTU↔FTU vascular inference, and adaptive Matplotlib layouts; produced reproducible, high-res SVG diagrams.'
+    ]
+  },
+  {
+    company: 'Hyphenova',
+    position: 'Software Engineer - AI/ML',
+    duration: 'July 2024 - Nov 2024',
+    year: '2024',
+    location: 'Los Angeles, CA',
+    description:
+      'Shipped GenAI/NLP features and ML services using Python, PyTorch/TensorFlow, Docker, and Kubernetes with Prometheus/Grafana monitoring.',
+    achievements: [
+      'Containerized transformer models behind Docker + Flask APIs, improving accuracy by 15% and throughput by 10% across 5+ business units.',
+      'Launched Kubernetes-based recommendation engine with end-to-end observability; achieved 20% boost in personalization efficiency and 25% higher monitoring accuracy.'
+    ]
+  },
+  {
+    company: 'CanspiritAI',
+    position: 'Software Engineer',
+    duration: 'Mar 2022 - June 2022',
+    year: '2022',
+    location: 'Pune, India',
+    description:
+      'Built and deployed computer-vision pipelines on edge and cloud using Python, TensorFlow, OpenCV, Docker, and Kubernetes/KubeEdge.',
+    achievements: [
+      'Implemented end-to-end DETR object-detection pipeline with ResNet backbone, delivering 90% detection accuracy.',
+      'Configured KubeEdge clusters on WSL with Kubernetes to deploy lightweight edge AI; reached 81% model accuracy with minimal latency.',
+      'Optimized Docker image builds and deployment scripts, reducing inference response time by 15% across platforms.'
+    ]
+  }
+];
 
   return (
     <section id="experience" className="py-20 bg-gray-50">

@@ -1,28 +1,47 @@
-import { Code2, Database, Globe, Smartphone } from 'lucide-react';
+// import { Code2, Database, Globe, Smartphone } from 'lucide-react';
+import { Code2, Wrench, Cloud, Brain} from 'lucide-react';
 
 const About = () => {
   const skills = [
-    {
-      category: 'Frontend',
-      icon: <Globe className="w-6 h-6" />,
-      technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Vue.js']
-    },
-    {
-      category: 'Backend',
-      icon: <Database className="w-6 h-6" />,
-      technologies: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'REST APIs']
-    },
-    {
-      category: 'Mobile',
-      icon: <Smartphone className="w-6 h-6" />,
-      technologies: ['React Native', 'Flutter', 'iOS', 'Android', 'Expo']
-    },
-    {
-      category: 'Tools',
-      icon: <Code2 className="w-6 h-6" />,
-      technologies: ['Git', 'Docker', 'AWS', 'CI/CD', 'Figma']
-    }
-  ];
+  {
+    category: 'Programming Languages',
+    icon: <Code2 className="w-5 h-5" />,
+    technologies: [
+      'Python', 'SQL', 'JavaScript', 'TypeScript', 'C', 'C++', 'HTML', 'CSS', 'Tailwind'
+    ],
+  },
+  {
+    category: 'Frameworks & Tools',
+    icon: <Wrench className="w-5 h-5" />,
+    technologies: [
+      'Next.js', 'Node.js', 'FastAPI', 'Flask', 'React',
+      'Kubernetes', 'CI/CD', 'Docker', 'Git', 'GitHub', 'ShadCN'
+    ],
+  },
+  {
+    category: 'Data & Cloud Platforms',
+    icon: <Cloud className="w-5 h-5" />,
+    technologies: [
+      // Databases
+      'MySQL', 'PostgreSQL', 'Supabase', 'MongoDB', 'Firebase',
+      'BigQuery', 'Faiss Vector DB',
+      // Cloud + Big Data
+      'AWS',
+      'GCP', 'PySpark', 'Hadoop'
+    ],
+  },
+  {
+    category: 'AI/ML & Analytics',
+    icon: <Brain className="w-5 h-5" />,
+    technologies: [
+      // AI/ML
+      'PyTorch', 'TensorFlow', 'Transformers', 'HuggingFace',
+      'LangChain', 'RAG', 'OpenCV', 'NLP', 'LLMs',
+      // Analytics
+      'Power BI', 'Tableau', 'QuickSight', 'A/B Testing', 'Feature Engineering'
+    ],
+  },
+];
 
   const education = [
     {
@@ -91,7 +110,7 @@ const About = () => {
         <div>
           <h3 className="text-2xl font-bold text-black mb-8 text-center">Technical Skills</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {skills.map((skill, index) => (
+            {skills.map((skill) => (
               <div
                 key={skill.category}
                 className="group p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
@@ -108,7 +127,7 @@ const About = () => {
                   {skill.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm border border-gray-200 hover:border-blue-600 hover:text-blue-600 transition-colors duration-300"
+                      className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm border border-gray-200 hover:bg-blue-600 hover:text-white transition-colors duration-300"
                     >
                       {tech}
                     </span>

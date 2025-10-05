@@ -60,8 +60,8 @@ const Hero = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-white text-2xl">👋</span>
+              <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
+                <span className="text-white text-5xl pr-2.5 pb-2">👋</span>
               </div>
             </div>
           </div>
