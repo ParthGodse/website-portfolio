@@ -101,65 +101,80 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div>
-            <h3 className="text-2xl font-bold text-black mb-6">Send Message</h3>
-            <form className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
-                  placeholder="Your name"
-                />
-              </div>
+          <div className="[color-scheme:light] rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 className="text-2xl font-bold text-black mb-6">Send Message</h3>
+          <form className="space-y-4">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                Full Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg
+                          bg-white text-gray-900 caret-black
+                          placeholder:text-gray-400
+                          focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300
+                          [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#fff] [&:-webkit-autofill]:text-gray-900"
+                placeholder="Your name"
+              />
+            </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
-                  placeholder="your.email@example.com"
-                />
-              </div>
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg
+                          bg-white text-gray-900 caret-black
+                          placeholder:text-gray-400
+                          focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300
+                          [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#fff] [&:-webkit-autofill]:text-gray-900"
+                placeholder="your.email@example.com"
+              />
+            </div>
 
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
-                  placeholder="Project inquiry"
-                />
-              </div>
+            <div>
+              <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                Subject
+              </label>
+              <input
+                type="text"
+                id="subject"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg
+                          bg-white text-gray-900 caret-black
+                          placeholder:text-gray-400
+                          focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
+                placeholder="Subject of your message"
+              />
+            </div>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 resize-none"
-                  placeholder="Tell me about your project..."
-                ></textarea>
-              </div>
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                Message
+              </label>
+              <textarea
+                id="message"
+                rows={5}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none
+                          bg-white text-gray-900 caret-black
+                          placeholder:text-gray-400
+                          focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300
+                          [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#fff] [&:-webkit-autofill]:text-gray-900"
+                placeholder="Ask me anything..."
+              ></textarea>
+            </div>
 
-              <button
-                type="submit"
-                className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 font-medium transform hover:scale-105"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
+            <a
+              href="mailto:parthgod0708@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Parth,%0A%0AI%20came%20across%20your%20portfolio%20and..."
+              className="block text-center w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 font-medium transform hover:scale-105"
+            >
+              Send Message
+            </a>
+          </form>
+        </div>
         </div>
       </div>
     </section>
