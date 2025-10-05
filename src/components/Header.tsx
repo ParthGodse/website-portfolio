@@ -77,7 +77,7 @@ function AutoSizedPdfModal({
 }
 
 /* ------------------------------- Header ------------------------------- */
-const Header: React.FC = () => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
@@ -100,19 +100,27 @@ const Header: React.FC = () => {
 
   const scrollToSection = (sectionId: string) => {
     const el = document.getElementById(sectionId);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-    setIsMenuOpen(false);
+    // if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (el) {
+      const navbarHeight = 20; // Adjust based on your navbar height
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+      setIsMenuOpen(false);
+    }
   };
 
   return (
     <>
       <header
-        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl px-6 rounded-full ring-1 shadow-md
-          ${isScrolled ? "bg-white/10 backdrop-blur-md ring-black/20 shadow-lg"
-                       : "bg-white/5 backdrop-blur-sm ring-black/10"}
+        className={`fixed top-4 left-1/2 -translate-x-1/2 z-[50] w-full max-w-4xl px-6 rounded-full ring-1 shadow-md bg-white ring-gray-300
         `}
       >
-        <nav className="px-6 py-4">
+        <nav className="px-6 py-2.5 h-15">
           <div className="flex items-center justify-between">
             <button
               onClick={() => scrollToSection("home")}

@@ -1,5 +1,6 @@
 import { ChevronDown } from 'lucide-react';
 import profilePic from '../assets/p2.jpg';
+// import CornerArcs from "./Extra";
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -8,7 +9,27 @@ const Hero = () => {
 
  return (
     <section id="home" className="relative min-h-screen w-full flex items-center justify-center bg-white">
-  <div className="w-full px-6 md:px-10">
+      {/* <div className="absolute inset-0 z-10 pointer-events-none">
+        <CornerArcs />
+      </div> */}
+<svg
+        aria-hidden="true"
+        className="pointer-events-none absolute top-0 left-0 w-full h-70 z-0"
+        viewBox="0 0 1440 160"
+        preserveAspectRatio="none"
+      >
+        <defs>
+          <linearGradient id="waveBlue" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.95" />
+            <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.95" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M0,80 C200,140 400,0 720,80 C1040,160 1240,40 1440,80 L1440,0 L0,0 Z"
+          fill="url(#waveBlue)"
+        />
+      </svg>
+  <div className="w-full px-6 md:px-10 z-10">
     <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
       {/* Left side - Text content */}
       <div className="mx-auto max-w-2xl w-full pl-30"> {/* centers the column */}
