@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 /* ---------- Auto-sized PDF Modal (Letter portrait 8.5x11) ---------- */
@@ -117,8 +117,13 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-4 left-1/2 -translate-x-1/2 z-[50] w-full max-w-4xl px-6 rounded-full ring-1 shadow-md bg-white ring-gray-300
-        `}
+        className={`fixed top-4 left-1/2 -translate-x-1/2 z-[50] w-full max-w-4xl px-6 rounded-full ring-1 shadow-md transition-all duration-300 ${
+    isScrolled
+      // when scrolled: translucent + blur
+      ? "bg-white/60 supports-[backdrop-filter]:bg-white/30 backdrop-blur-md ring-black/10 shadow-lg"
+      // at top: solid/opaque
+      : "bg-white ring-gray-300 shadow-md"
+  }`}
       >
         <nav className="px-6 py-2.5 h-15">
           <div className="flex items-center justify-between">

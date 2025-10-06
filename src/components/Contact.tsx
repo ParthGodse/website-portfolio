@@ -102,7 +102,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="[color-scheme:light] rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-          <h3 className="text-2xl font-bold text-black mb-6">Send Message</h3>
+          <h3 className="text-2xl font-bold text-black mb-6 text-center">Send Message</h3>
           <form className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -157,7 +157,7 @@ const Contact = () => {
               </label>
               <textarea
                 id="message"
-                rows={5}
+                rows={4}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none
                           bg-white text-gray-900 caret-black
                           placeholder:text-gray-400
