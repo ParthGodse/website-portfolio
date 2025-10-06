@@ -100,3 +100,80 @@ const Hero = () => {
 };
 
 export default Hero;
+// --- Mobile-only Hero (paste below your existing Hero component) ---
+export const HeroMobile = () => {
+  const scrollTo = (id: string) =>
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+
+  return (
+    <section id="home-mobile" className="md:hidden relative min-h-screen w-full bg-white">
+      <svg
+        aria-hidden="true"
+        className="pointer-events-none absolute top-0 left-0 w-full h-32 z-0"
+        viewBox="0 0 1440 160"
+        preserveAspectRatio="none"
+      >
+        <defs>
+          <linearGradient id="waveBlueMobile" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.95" />
+            <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.95" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M0,80 C200,140 400,0 720,80 C1040,160 1240,40 1440,80 L1440,0 L0,0 Z"
+          fill="url(#waveBlueMobile)"
+        />
+      </svg>
+
+      <div className="relative z-10 w-full px-4 pt-14 pb-20">
+        <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs text-gray-700">
+          <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" />
+          Open to Opportunities
+        </div>
+
+        <h1 className="text-4xl font-bold text-black mb-2">
+          Parth <span className="text-blue-600">Godse</span>
+        </h1>
+        <p className="text-lg text-gray-700 mb-3">Full-Stack Software Developer</p>
+        <p className="text-base text-gray-600 mb-6">
+          Passionate about creating elegant solutions to complex problems. Specializing in modern
+          web technologies and scalable applications.
+        </p>
+
+        <div className="flex flex-col gap-3">
+          <button
+            onClick={() => scrollTo("projects")}
+            className="px-6 py-3 bg-blue-600 text-white rounded-lg active:scale-[0.99] transition"
+          >
+            View My Work
+          </button>
+          <button
+            onClick={() => scrollTo("contact")}
+            className="px-6 py-3 border-2 border-black text-black rounded-lg active:scale-[0.99] transition"
+          >
+            Get In Touch
+          </button>
+        </div>
+
+        <div className="mt-8 flex justify-center">
+          <div className="relative">
+            <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-blue-600 shadow-2xl">
+              <img src={profilePic} alt="Parth Godse" className="w-full h-full object-cover" />
+            </div>
+            <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-blue-600 rounded-full grid place-items-center shadow-lg">
+              <span className="text-white text-3xl">👋</span>
+            </div>
+          </div>
+        </div>
+
+        <button
+          onClick={() => scrollTo("about")}
+          className="mt-10 mx-auto block"
+          aria-label="Scroll to About"
+        >
+          <ChevronDown className="w-6 h-6 text-gray-600" />
+        </button>
+      </div>
+    </section>
+  );
+};
