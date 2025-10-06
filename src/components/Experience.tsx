@@ -115,3 +115,106 @@ const Experience = () => {
 };
 
 export default Experience;
+
+// --- Mobile-only Experience (do not change the original above) ---
+export const ExperienceMobile = () => {
+  const experiences = [
+    {
+      company: 'Cyberinfrastructure for Network Science Center (CNS@IU)',
+      position: 'Software Engineer',
+      duration: 'Jan 2025 - Present',
+      year: '2025',
+      location: 'Bloomington, IN',
+      description:
+        'Built OpenCV + NumPy automation for biomedical image segmentation and a Python engine to generate high-resolution SVG schematics of organ blood flow from structured CSV datasets.',
+      achievements: [
+        'Automated segmentation pipeline reduced manual effort from hours to minutes; scaled 400k+ images with CUDA + multithreading, cutting runtime by 40% while preserving quality via adaptive resizing/aspect-ratio alignment.',
+        'Anatomical visualization system with ID normalization, FTU↔FTU vascular inference, and adaptive Matplotlib layouts; produced reproducible, high-res SVG diagrams.',
+      ],
+    },
+    {
+      company: 'Hyphenova',
+      position: 'Software Engineer - AI/ML',
+      duration: 'July 2024 - Nov 2024',
+      year: '2024',
+      location: 'Los Angeles, CA',
+      description:
+        'Shipped GenAI/NLP features and ML services using Python, PyTorch/TensorFlow, Docker, and Kubernetes with Prometheus/Grafana monitoring.',
+      achievements: [
+        'Containerized transformer models behind Docker + Flask APIs, improving accuracy by 15% and throughput by 10% across 5+ business units.',
+        'Launched Kubernetes-based recommendation engine with end-to-end observability; achieved 20% boost in personalization efficiency and 25% higher monitoring accuracy.',
+      ],
+    },
+    {
+      company: 'CanspiritAI',
+      position: 'Software Engineer',
+      duration: 'Mar 2022 - June 2022',
+      year: '2022',
+      location: 'Pune, India',
+      description:
+        'Built and deployed computer-vision pipelines on edge and cloud using Python, TensorFlow, OpenCV, Docker, and Kubernetes/KubeEdge.',
+      achievements: [
+        'Implemented end-to-end DETR object-detection pipeline with ResNet backbone, delivering 90% detection accuracy.',
+        'Configured KubeEdge clusters on WSL with Kubernetes to deploy lightweight edge AI; reached 81% model accuracy with minimal latency.',
+        'Optimized Docker image builds and deployment scripts, reducing inference response time by 15% across platforms.',
+      ],
+    },
+  ];
+
+  return (
+    <section id="experience-mobile" className="md:hidden py-14 bg-gray-50">
+      <div className="mx-auto max-w-2xl px-4">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold text-black mb-3">Work Experience</h2>
+          <p className="text-base text-gray-600">
+            My professional journey in software development.
+          </p>
+        </div>
+
+        {experiences.map((exp, index) => (
+          <div key={exp.company} className="relative pl-6 mb-8">
+            {/* vertical rail */}
+            {index !== experiences.length - 1 && (
+              <span className="absolute left-2.5 top-5 h-[calc(100%-1rem)] w-0.5 bg-blue-200" />
+            )}
+            {/* dot */}
+            <span className="absolute left-1.5 top-4 w-3 h-3 rounded-full bg-blue-600 ring-4 ring-white shadow" />
+
+            {/* year pill */}
+            <div className="inline-flex items-center rounded-full bg-blue-50 text-blue-700 text-xs font-semibold px-2 py-1 mb-3">
+              {exp.year}
+            </div>
+
+            <div className="bg-white rounded-xl p-4 border border-gray-200 border-l-4 border-l-blue-600 shadow-sm">
+              <h3 className="text-lg font-bold text-black">{exp.position}</h3>
+              <p className="text-blue-600 font-semibold text-sm mb-2">{exp.company}</p>
+
+              <div className="flex flex-col gap-1 text-xs text-gray-500 mb-3">
+                <div className="flex items-center gap-1.5">
+                  <Calendar className="w-4 h-4" />
+                  {exp.duration}
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <MapPin className="w-4 h-4" />
+                  {exp.location}
+                </div>
+              </div>
+
+              <p className="text-gray-600 text-sm mb-3 leading-relaxed">{exp.description}</p>
+
+              <h4 className="font-semibold text-black mb-1.5 text-sm">Key Achievements:</h4>
+              <ul className="space-y-1.5">
+                {exp.achievements.map((a, i) => (
+                  <li key={i} className="text-gray-600 text-sm leading-snug flex items-start">
+                    <span className="text-blue-600 mr-2 leading-[1.25rem]">•</span>
+                    <span>{a}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};

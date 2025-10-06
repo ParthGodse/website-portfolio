@@ -125,7 +125,7 @@ export const HeroMobile = () => {
         />
       </svg>
 
-      <div className="relative z-10 w-full px-4 pt-14 pb-20">
+      <div className="relative z-10 w-full px-4 pt-18 pb-20">
         <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs text-gray-700">
           <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" />
           Open to Opportunities

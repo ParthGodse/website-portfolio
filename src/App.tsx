@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Hero, { HeroMobile } from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
-import Experience from './components/Experience';
+import Experience, {ExperienceMobile} from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -37,7 +37,7 @@ function App() {
       {mdUp ? <Hero /> : <HeroMobile />}
 
       <About />
-      <Experience />
+      {mdUp ? <Experience /> : <ExperienceMobile />}
       <Projects />
       <Contact />
       <Footer />
