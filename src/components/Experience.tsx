@@ -162,7 +162,7 @@ export const ExperienceMobile = () => {
   ];
 
   return (
-    <section id="experience-mobile" className="md:hidden py-14 bg-gray-50">
+    <section id="experience" className="md:hidden py-14 bg-gray-50">
       <div className="mx-auto max-w-2xl px-4">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-black mb-3">Work Experience</h2>

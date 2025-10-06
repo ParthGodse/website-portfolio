@@ -106,7 +106,7 @@ export const HeroMobile = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <section id="home-mobile" className="md:hidden relative min-h-screen w-full bg-white">
+    <section id="home" className="md:hidden relative min-h-screen w-full bg-white">
       <svg
         aria-hidden="true"
         className="pointer-events-none absolute top-0 left-0 w-full h-32 z-0"
