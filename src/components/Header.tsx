@@ -152,7 +152,7 @@ const Header = () => {
                   setIsMenuOpen(false);
                   setIsResumeOpen(true);
                 }}
-                className="px-4 py-2 rounded-full bg-blue-600 text-white font-mono font-medium hover:bg-blue-700 transition-colors duration-300 ring-1 ring-blue-600/40"
+                className="px-4 py-2 rounded-full !bg-blue-600 text-white font-mono font-medium hover:bg-blue-700 transition-colors duration-300 ring-1 ring-blue-600/40"
               >
                 Resume
               </button>
@@ -185,7 +185,7 @@ const Header = () => {
                   setIsMenuOpen(false);
                   setIsResumeOpen(true);
                 }}
-                className="mt-2 mx-4 block w-auto text-center px-4 py-2 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors duration-300"
+                className="mt-2 mx-4 block w-auto text-center px-4 py-2 rounded-full !bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors duration-300"
               >
                 Resume
               </button>

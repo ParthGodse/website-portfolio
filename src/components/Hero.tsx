@@ -12,7 +12,7 @@ const Hero = () => {
       {/* <div className="absolute inset-0 z-10 pointer-events-none">
         <CornerArcs />
       </div> */}
-<svg
+      <svg
         aria-hidden="true"
         className="pointer-events-none absolute top-0 left-0 w-full h-70 z-0"
         viewBox="0 0 1440 160"
@@ -57,7 +57,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 animate-slide-up animation-delay-600 sm:self-start">
             <button
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 font-medium transform hover:scale-105"
+              className="px-8 py-3 !bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 font-medium transform hover:scale-105"
             >
               View My Work
             </button>
