@@ -71,21 +71,70 @@ const Hero = () => {
         </div>
       </div>
           
-          {/* Right side - Profile picture */}
+          {/* Right side - Profile picture (rings outside the photo) */}
           <div className="flex justify-center animate-fade-in animation-delay-300">
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-600 shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                <img
-                  src={profilePic}
-                  alt="Parth Godse"
-                  className="w-full h-full object-cover"
+              {/* OUTER frame (no overflow hidden) */}
+              <div className="relative w-64 h-64 md:w-80 md:h-80 grid place-items-center">
+              {/* --- RADIANCE (between rings and photo) --- */}
+              <div className="pointer-events-none absolute inset-0 z-[5] grid place-items-center">
+                {/* core glow */}
+                <div
+                  className="absolute rounded-full w-[180%] h-[180%] glow-once"
+                  style={{
+                    ['--glow-from' as any]: '0.7',   // start smaller than its own box
+                    ['--glow-to' as any]: '1',       // land at 180%
+                    ['--glow-dur' as any]: '1200ms', // timing
+                    animationDelay: '0ms',        // delay
+                  }}
+                />
+                {/* softer outer halo */}
+                <div
+                  className="absolute rounded-full w-[210%] h-[210%] glow-once-dim"
+                  style={{
+                    ['--glow-from' as any]: '0.7',
+                    ['--glow-to' as any]: '1',
+                    ['--glow-dur' as any]: '1500ms',
+                    animationDelay: '180ms',
+                  }}
                 />
               </div>
-              <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
+
+
+              {/* --- RINGS (momentary, then disappear) --- */}
+              <div className="pointer-events-none absolute inset-0 z-[10] grid place-items-center">
+                {/* 105% → start = 100/105 = 0.952 */}
+                <div
+                  className="absolute rounded-full border-4 border-blue-500/60 w-[105%] h-[105%] animate-ring-vanish"
+                  style={{ ['--ring-start' as any]: '0.952', ['--ring-dur' as any]: '850ms', animationDelay: '40ms' }}
+                />
+                {/* 125% → start = 100/125 = 0.8 */}
+                <div
+                  className="absolute rounded-full border-2 border-blue-500/40 w-[125%] h-[125%] animate-ring-vanish"
+                  style={{ ['--ring-start' as any]: '0.8', ['--ring-dur' as any]: '950ms', animationDelay: '110ms' }}
+                />
+                {/* 155% → start = 100/155 ≈ 0.645 */}
+                <div
+                  className="absolute rounded-full border border-blue-500/30 w-[155%] h-[155%] animate-ring-vanish"
+                  style={{ ['--ring-start' as any]: '0.645', ['--ring-dur' as any]: '1050ms', animationDelay: '180ms' }}
+                />
+              </div>
+
+              {/* --- PHOTO (above everything) --- */}
+              <div className="relative z-[15] rounded-full overflow-hidden border-4 border-blue-600 shadow-2xl w-full h-full">
+                <img src={profilePic} alt="Parth Godse" className="w-full h-full object-cover" />
+              </div>
+            </div>
+
+
+              {/* Waving emoji badge */}
+              <div className="absolute -bottom-2 -right-2 z-20 w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
                 <span className="text-white text-5xl pr-2.5 pb-2">👋</span>
               </div>
             </div>
           </div>
+
+
         </div>
         
         <button

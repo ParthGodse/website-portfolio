@@ -139,3 +139,47 @@ html {
 .animate-scaleIn {
   animation: scaleIn 300ms ease-out both;
 }
+
+/* --- Radiant glow + rings --- */
+@layer utilities {
+  @keyframes glow-out {
+    from { opacity: 0.85; transform: scale(var(--glow-from, 0.7)); }
+    to   { opacity: 0.1;    transform: scale(var(--glow-to, 1)); }
+  }
+  .glow-once {
+    animation: glow-out var(--glow-dur, 1200ms) ease-out forwards;
+    background: radial-gradient(closest-side, rgba(59,130,246,0.85), rgba(59,130,246,0) 68%);
+    filter: blur(35px);
+    will-change: transform, opacity;
+  }
+  .glow-once-dim {
+    animation: glow-out var(--glow-dur, 1400ms) ease-out forwards;
+    background: radial-gradient(closest-side, rgba(59,130,246,0.52), rgba(59,130,246,0) 72%);
+    filter: blur(50px);
+  }
+}
+
+
+@layer utilities {
+  @keyframes ring-land {
+    from { transform: scale(var(--ring-start, 0.9)); opacity: 0 }
+    60%  { opacity: 1 }
+    to   { transform: scale(1); opacity: 1 }
+  }
+  .animate-ring-land {
+    animation: ring-land 700ms cubic-bezier(.22,1,.36,1) forwards;
+    transform-origin: center;
+    will-change: transform, opacity;
+  }
+
+  @keyframes ring-vanish {
+    0%   { transform: scale(var(--ring-start, 0.9)); opacity: 0; }
+    45%  { opacity: 1; }
+    100% { transform: scale(1.06); opacity: 0; } /* slight overshoot then disappear */
+  }
+  .animate-ring-vanish {
+    animation: ring-vanish var(--ring-dur, 900ms) cubic-bezier(.22,1,.36,1) forwards;
+    transform-origin: center;
+    will-change: transform, opacity;
+  }
+}
