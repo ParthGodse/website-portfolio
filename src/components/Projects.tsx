@@ -123,8 +123,8 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         {/* Full Stack Projects Section */}
-        <div className="mb-20">
-          <div className="text-center mb-16">
+        <div className="mb-24">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-black mb-4">Full Stack Projects</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               End-to-end applications showcasing real-time systems and modern web development.
@@ -135,7 +135,7 @@ const Projects = () => {
 
         {/* AI/ML/Data Projects Section */}
         <div>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-black mb-4">AI/ML/Data Projects</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Machine learning, big data pipelines, and intelligent systems powered by AI.
