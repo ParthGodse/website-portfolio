@@ -1,7 +1,24 @@
-import { Github } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react';
 
 const Projects = () => {
   const fullStackProjects = [
+    {
+      title: 'WeatherPro - Advanced Weather Application',
+      description:
+        'Modern weather app with dynamic animations (rain, snow, thunderstorm, fog), real-time OpenWeatherMap API integration, and glassmorphism UI. Features auto-location, favorites with localStorage, smart autocomplete search, 5-day forecast, AQI display, and Celsius/Fahrenheit toggle. Built with Vite and Tailwind CSS v4.',
+      image:
+        'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: [
+        'Vite',
+        'Tailwind CSS v4',
+        'JavaScript',
+        'OpenWeatherMap API',
+        'LocalStorage',
+        'Vercel',
+      ],
+      githubUrl: 'https://github.com/ParthGodse/weatherly',
+      liveUrl: 'https://weatherly-theta-five.vercel.app/', // Add your live demo URL
+    },
     {
       title: 'LiveSync Kanban Dashboard',
       description:
@@ -18,6 +35,7 @@ const Projects = () => {
         'CI/CD',
       ],
       githubUrl: 'https://github.com/ParthGodse/task-manager',
+      liveUrl: 'https://task-manager-two-orcin.vercel.app/login', // Add your live demo URL
     },
   ];
 
@@ -61,7 +79,14 @@ const Projects = () => {
     },
   ];
 
-  const renderProjects = (projectsList: { title: string; description: string; image: string; technologies: string[]; githubUrl: string }[]) => (
+  const renderProjects = (projectsList: Array<{
+    title: string;
+    description: string;
+    image: string;
+    technologies: string[];
+    githubUrl: string;
+    liveUrl?: string;
+  }>) => (
     <div className="grid md:grid-cols-2 gap-8">
       {projectsList.map((project) => (
         <div
@@ -102,7 +127,7 @@ const Projects = () => {
               ))}
             </div>
 
-            <div className="flex">
+            <div className="flex gap-3">
               <a
                 href={project.githubUrl}
                 target="_blank"
@@ -112,6 +137,17 @@ const Projects = () => {
                 <Github className="w-4 h-4 text-white" />
                 View on GitHub
               </a>
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-blue-700 transition-all duration-300 text-sm font-medium transform hover:scale-105"
+                >
+                  <ExternalLink className="w-4 h-4 text-white" />
+                  Live Demo
+                </a>
+              )}
             </div>
           </div>
         </div>
