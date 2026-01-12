@@ -77,6 +77,23 @@ const Projects = () => {
       ],
       githubUrl: 'https://github.com/ParthGodse/Deepfake-Audio-Detection',
     },
+    {
+      title: 'COVID-19 Sentiment Analysis',
+      description:
+        'Analyzed 45k+ COVID-19 tweets and live news data to study public sentiment and misinformation in India. Built NLP pipelines with lemmatization and vectorization, compared XGBoost, Logistic Regression, Random Forest, and TextBlob models, and visualized sentiment trends during the Omicron wave using Tableau.',
+      image:
+        './covid19.jpg',
+      technologies: [
+        'Python',
+        'NLP (NLTK)',
+        'XGBoost',
+        'Logistic Regression',
+        'Random Forest',
+        'TextBlob',
+        'Tableau'
+      ],
+      githubUrl: 'https://github.com/ParthGodse/COVID19-Sentiment-Analysis-using-NLP',
+    },
   ];
 
   const renderProjects = (projectsList: Array<{
