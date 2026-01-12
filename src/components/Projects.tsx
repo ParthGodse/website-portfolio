@@ -142,9 +142,9 @@ const Projects = () => {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-blue-700 transition-all duration-300 text-sm font-medium transform hover:scale-105"
+                  className="flex items-center gap-2 px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-blue-700 border-blue-700 transition-all duration-300 text-sm font-medium transform hover:scale-105"
                 >
-                  <ExternalLink className="w-4 h-4 text-white" />
+                  <ExternalLink className="w-4 h-4 text-blue-700" />
                   Live Demo
                 </a>
               )}
