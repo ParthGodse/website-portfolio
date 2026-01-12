@@ -7,7 +7,7 @@ const Projects = () => {
       description:
         'Modern weather app with dynamic animations (rain, snow, thunderstorm, fog), real-time OpenWeatherMap API integration, and glassmorphism UI. Features auto-location, favorites with localStorage, smart autocomplete search, 5-day forecast, AQI display, and Celsius/Fahrenheit toggle. Built with Vite and Tailwind CSS v4.',
       image:
-        'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
+        './weatherly.jpg',
       technologies: [
         'Vite',
         'Tailwind CSS v4',
