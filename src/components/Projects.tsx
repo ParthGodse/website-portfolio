@@ -1,7 +1,7 @@
 import { Github } from 'lucide-react';
 
 const Projects = () => {
-  const projects = [
+  const fullStackProjects = [
     {
       title: 'LiveSync Kanban Dashboard',
       description:
@@ -17,8 +17,11 @@ const Projects = () => {
         'Python',
         'CI/CD',
       ],
-      githubUrl: 'https://github.com/ParthGodse/task-manager', // TODO: add your repo URL
+      githubUrl: 'https://github.com/ParthGodse/task-manager',
     },
+  ];
+
+  const aiMlProjects = [
     {
       title: 'Automated Daily News Briefing Agent',
       description:
@@ -26,7 +29,7 @@ const Projects = () => {
       image:
         'https://images.pexels.com/photos/261949/pexels-photo-261949.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['Python', 'LangChain', 'RAG', 'GCP', 'GitHub Actions'],
-      githubUrl: 'https://github.com/ParthGodse/daily-briefing-agent', // TODO: add your repo URL
+      githubUrl: 'https://github.com/ParthGodse/daily-briefing-agent',
     },
     {
       title: 'Amazon Reviews Big Data Analytics',
@@ -39,7 +42,7 @@ const Projects = () => {
         'PySpark',
         'XGBoost',
       ],
-      githubUrl: 'https://github.com/ParthGodse?tab=repositories', // TODO: add your repo URL
+      githubUrl: 'https://github.com/ParthGodse?tab=repositories',
     },
     {
       title: 'Deepfake Audio Detection with XAI',
@@ -54,75 +57,91 @@ const Projects = () => {
         'XAI (LIME/SHAP/Grad-CAM)',
         'Generative AI',
       ],
-      githubUrl: 'https://github.com/ParthGodse/Deepfake-Audio-Detection', // TODO: add your repo URL
+      githubUrl: 'https://github.com/ParthGodse/Deepfake-Audio-Detection',
     },
   ];
+
+  const renderProjects = (projectsList: { title: string; description: string; image: string; technologies: string[]; githubUrl: string }[]) => (
+    <div className="grid md:grid-cols-2 gap-8">
+      {projectsList.map((project) => (
+        <div
+          key={project.title}
+          className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+        >
+          <div className="relative overflow-hidden h-48 md:h-56">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+              referrerPolicy="no-referrer"
+              onError={(e) => {
+                e.currentTarget.src =
+                  'https://via.placeholder.com/800x450?text=Preview';
+              }}
+            />
+            <div className="pointer-events-none absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/10 transition-all duration-300" />
+          </div>
+
+          <div className="p-6">
+            <h3 className="text-xl font-bold text-black mb-3">
+              {project.title}
+            </h3>
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              {project.description}
+            </p>
+
+            <div className="flex flex-wrap gap-2 mb-4">
+              {project.technologies.map((tech) => (
+                <span
+                  key={tech}
+                  className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <div className="flex">
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 text-sm font-medium transform hover:scale-105"
+              >
+                <Github className="w-4 h-4 text-white" />
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 
   return (
     <section id="projects" className="py-20 bg-white">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-black mb-4">Featured Projects</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Here are some of my projects that showcase real-time systems, big-data pipelines, and agentic AI.
-          </p>
+        {/* Full Stack Projects Section */}
+        <div className="mb-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-black mb-4">Full Stack Projects</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              End-to-end applications showcasing real-time systems and modern web development.
+            </p>
+          </div>
+          {renderProjects(fullStackProjects)}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <div
-              key={project.title}
-              className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
-            >
-              <div className="relative overflow-hidden h-48 md:h-56">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  loading="lazy"
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    e.currentTarget.src =
-                      'https://via.placeholder.com/800x450?text=Preview';
-                  }}
-                />
-                <div className="pointer-events-none absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/10 transition-all duration-300" />
-              </div>
-
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-black mb-3">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Single blue GitHub button */}
-                <div className="flex">
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 text-sm font-medium transform hover:scale-105"
-                  >
-                    <Github className="w-4 h-4 text-white" />
-                    View on GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* AI/ML/Data Projects Section */}
+        <div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-black mb-4">AI/ML/Data Projects</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Machine learning, big data pipelines, and intelligent systems powered by AI.
+            </p>
+          </div>
+          {renderProjects(aiMlProjects)}
         </div>
       </div>
     </section>
