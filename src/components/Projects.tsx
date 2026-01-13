@@ -3,7 +3,7 @@ import { Github, ExternalLink } from 'lucide-react';
 const Projects = () => {
   const fullStackProjects = [
     {
-      title: 'WeatherPro - Advanced Weather Application',
+      title: 'WeatherLy - Advanced Weather Application',
       description:
         'Modern weather app with dynamic animations (rain, snow, thunderstorm, fog), real-time OpenWeatherMap API integration, and glassmorphism UI. Features auto-location, favorites with localStorage, smart autocomplete search, 5-day forecast, AQI display, and Celsius/Fahrenheit toggle. Built with Vite and Tailwind CSS v4.',
       image:
@@ -37,6 +37,40 @@ const Projects = () => {
       githubUrl: 'https://github.com/ParthGodse/task-manager',
       liveUrl: 'https://task-manager-two-orcin.vercel.app/login', // Add your live demo URL
     },
+    {
+      title: 'GraphQL E-Commerce Platform',
+      description:
+        'Scalable e-commerce platform powered by GraphQL, Apollo Server, and Prisma. Supports product catalog, cart & wishlist, order flows, and role-based access with PostgreSQL. Reduced overfetching by 60% and improved API response times by 35%.',
+      image:
+        '/ecommerce.png',
+      technologies: [
+        'GraphQL',
+        'Apollo Server',
+        'Node.js',
+        'Prisma',
+        'PostgreSQL',
+        'React',
+        'Tailwind',
+      ],
+      githubUrl: 'https://github.com/ParthGodse/ecom-graphql',
+    },
+    {
+      title: 'Full-Stack Application Tracker',
+      description:
+        'Full-stack job application tracker built with React (Vite), Flask, and Firebase. Enables efficient tracking of job applications with secure authentication and real-time data storage. Reduced manual tracking effort by 40% and improved data retrieval speed by 30%.',
+      image:
+        '/apptrack.jpg',
+      technologies: [
+        'React (Vite)',
+        'TypeScript',
+        'Flask',
+        'Firebase',
+        'Tailwind',
+        'ShadCN',
+        'Vercel',
+      ],
+      githubUrl: 'https://github.com/ParthGodse/app-tracker',
+    }
   ];
 
   const aiMlProjects = [
