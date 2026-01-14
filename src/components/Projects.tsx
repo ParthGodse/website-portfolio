@@ -42,7 +42,7 @@ const Projects = () => {
       description:
         'Scalable e-commerce platform powered by GraphQL, Apollo Server, and Prisma. Supports product catalog, cart & wishlist, order flows, and role-based access with PostgreSQL. Reduced overfetching by 60% and improved API response times by 35%.',
       image:
-        '/ecommerce.png',
+        '/ecom.jpg',
       technologies: [
         'GraphQL',
         'Apollo Server',
